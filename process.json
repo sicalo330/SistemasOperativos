@@ -1,0 +1,6 @@
+[
+  { "name": "A", "arrival": 0, "burst": 5 },
+  { "name": "B", "arrival": 2, "burst": 3 },
+  { "name": "C", "arrival": 4, "burst": 6 },
+  { "name": "D", "arrival": 6, "burst": 4 }
+]
