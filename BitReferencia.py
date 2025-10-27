@@ -5,7 +5,8 @@ marcos = []
 bitsRef = []
 orden = []
 
-print("Secuencia: " + str(memoria) + "\n" + "-"*60)
+print("Secuencia: " + str(memoria) + "\n")
+print("----------------------------------------------------------------------------------------------------------")
 
 for paso, digito in enumerate(memoria, start=1):
     print("Paso " + str(paso) + ": Procesando dígito " + str(digito))
@@ -24,7 +25,7 @@ for paso, digito in enumerate(memoria, start=1):
                 bitsRef[i] = 0
 
         # Mostramos el estado actual
-        print("Hit: el dígito " + digito + " ya está en la memoria.")
+        print("El dígito " + digito + " ya está en la memoria.")
         print("Marcos: " + str(marcos) + " | Bits: " + str(bitsRef) + " | Orden: " + str(orden) + "\n")
         #Al parecer lo que hace continue es pasar al siguiente digito de la lista marcos
         continue
@@ -34,7 +35,7 @@ for paso, digito in enumerate(memoria, start=1):
         marcos.append(digito)
         bitsRef.append(0)
         orden.append(digito)
-        print("ADD: se agrega " + str(digito) + ".")
+        print("Se agrega " + str(digito) + ".")
         print("Marcos: " + str(marcos) + " | Bits: " + str(bitsRef) + " | Orden: " + str(orden) + "\n")
         continue
 
@@ -49,7 +50,7 @@ for paso, digito in enumerate(memoria, start=1):
         marcos.append(digito)
         bitsRef.append(0)
         orden.append(digito)
-        print("REPLACE pop(0): reemplazando " + str(eliminado) + " por " + str(digito) + ".")
+        print("Reemplazando " + str(eliminado) + " por " + str(digito) + ".")
     else:#Si entra al else significa que el primero tiene referencia
         bitsRef[0] = 0 #Se resetea el bit de referencia del primero
         #El if else ocurre si la lista tiene más de un elemento

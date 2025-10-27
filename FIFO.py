@@ -2,9 +2,10 @@ print("Ingrese la secuencia de referencias de páginas: ", end=" ")
 memoria = input()
 tamanoMarco = 3
 marcos = []
-orden = []  # Lleva el orden de llegada para FIFO
+orden = []#Lleva el orden de llegada para FIFO
 
-print(f"Secuencia: {memoria}\n{'-'*60}")
+print("Secuencia: " + str(memoria) + "\n")
+print("----------------------------------------------------------------------------------------------------------")
 
 for paso, digito in enumerate(memoria, start=1):
     print("Paso " + str(paso) + ": Procesando dígito " + str(digito))
@@ -18,7 +19,7 @@ for paso, digito in enumerate(memoria, start=1):
     if len(marcos) < tamanoMarco:
         marcos.append(digito)
         orden.append(digito)
-        print("ADD: se agrega " + str(digito) + ".")
+        print("Se agrega " + str(digito) + ".")
         print("Marcos: " + str(marcos) + " | Orden: " + str(orden) + "\n")
         continue
     #Aquí va a entrar después de los primero 3 pasos, cuando ya se llenaron los marcos y el digito a reemplazar no está en los marcos
@@ -27,7 +28,7 @@ for paso, digito in enumerate(memoria, start=1):
     #Se añaden los nuevos valores en la lista marcos y orden
     marcos.append(digito)
     orden.append(digito)
-    print("REPLACE: se reemplaza " + str(eliminado) + " por " + str(digito) + ".")
+    print("Se reemplaza " + str(eliminado) + " por " + str(digito) + ".")
     print("Marcos: " + str(marcos) + " | Orden: " + str(orden) + "\n")
 
 print("------------------------------------------------------------------------------------------------------------------------")
